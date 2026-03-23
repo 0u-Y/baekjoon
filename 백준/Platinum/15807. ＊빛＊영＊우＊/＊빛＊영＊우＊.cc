@@ -30,10 +30,10 @@ int main() {
 
 	}
 
-	for(int i=1; i<3004; i++){
-		for(int j=1; j<3004; j++){
-			dp[i][j] = L_light[3004 + i-j] + dp[i-1][j] + R_light[i+j] + light[i][j];
-			L_light[3004 + i-j] += light[i][j];
+	for(int i=1; i<3003; i++){
+		for(int j=1; j<3003; j++){
+			dp[i][j] = L_light[3003 + i-j] + dp[i-1][j] + R_light[i+j] + light[i][j];
+			L_light[3003 + i-j] += light[i][j];
 			R_light[i+j] += light[i][j];
 		}
 	}
